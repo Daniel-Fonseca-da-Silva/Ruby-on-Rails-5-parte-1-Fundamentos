@@ -10,8 +10,28 @@
                 </tr>
             </thead>
             <tbody>
-                <% todos = Produto.all %>
-                <% todos.each do |produto|  %>
+                <% @produtos.each do |produto|  %>
+                    <tr>
+                        <td><%= produto.nome %></td>
+                        <td><%= produto.descricao %></td>
+                        <td><%= produto.preco %></td>
+                        <td><%= produto.quantidade %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+        <h3>Produtos com desconto</h3>
+         <table>
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>Descrição</td>
+                    <td>Preço</td>
+                    <td>Quantidade</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% @produto_com_desconto.each do |produto|  %>
                     <tr>
                         <td><%= produto.nome %></td>
                         <td><%= produto.descricao %></td>
