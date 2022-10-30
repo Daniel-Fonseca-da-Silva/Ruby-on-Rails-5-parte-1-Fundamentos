@@ -3,7 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.2"
 
-# bootstrap
+# Jquery
+gem 'jquery-rails'
+
+# Bootstrap
 gem "twitter-bootstrap-rails"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
