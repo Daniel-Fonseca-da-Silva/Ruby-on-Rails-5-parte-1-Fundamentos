@@ -15,6 +15,14 @@
       <%= menu_group do %>
         <%= menu_item "Criar novo produto", new_produto_path %>
       <% end %>
+      
+      <%= form_tag busca_produto_path, class:"navbar-form navbar-right" do %>
+      <div class="form-group">
+        <%= text_field_tag :nome, nil, class:"form-control" %>
+        <%= button_to "Buscar", nil, class:"btn btn-default" %>
+        </div>
+      <% end %>
+
     <% end %>
       <div class="container">
         <%= yield %>
